@@ -437,16 +437,3 @@ class Compiler:
                 instructionstream.append(int(0))
         except UnboundLocalError:
             instructionstream.append(int(0))
-
-    def startTest(instructionstream):
-        try:
-            print("Intel 8008 Test")
-            print("Test 2+2=4")
-            instructionstream.append(0x06)
-            instructionstream.append(2)
-            instructionstream.append(0x0E)
-            instructionstream.append(2)
-            instructionstream.append(0x81)
-            print("Test Success")
-        except Exception:
-            print("Test Failed")

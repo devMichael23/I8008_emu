@@ -4,9 +4,7 @@ import Compiler
 
 class MotherBoard:
     def __init__(self):
-        self.instructionstreamTest = []
         self.instructionstream = []
-        self.test = Compiler.Compiler.startTest(self.instructionstreamTest)
         self.compiler =\
             Compiler.Compiler(self.instructionstream)
         self.instructionStreamOffset = 0
@@ -51,10 +49,6 @@ class MotherBoard:
             self.writeToData(self.instructionstream[self.pc])
             self.pc += 1
         return
-
-    def nextbyteTest(self) -> int:
-        self.pcTest += 1
-        return self.instructionstreamTest[self.pcTest-1]
 
     def nextbyte(self) -> int:
         self.pc += 1
